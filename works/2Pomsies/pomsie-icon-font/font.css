@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'pomsie-icon-font';
+  src:  url('fonts/pomsie-icon-font.eot?4vwv38');
+  src:  url('fonts/pomsie-icon-font.eot?4vwv38#iefix') format('embedded-opentype'),
+    url('fonts/pomsie-icon-font.ttf?4vwv38') format('truetype'),
+    url('fonts/pomsie-icon-font.woff?4vwv38') format('woff'),
+    url('fonts/pomsie-icon-font.svg?4vwv38#pomsie-icon-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ps-"], [class*=" ps-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pomsie-icon-font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ps-big-heart:before {
+  content: "\e900";
+}
+.ps-check-mark:before {
+  content: "\e901";
+  margin-right: 10px;
+  color: #DA02DF;
+}
+.ps-crown:before {
+  content: "\e902";
+  color: #5798FF;
+  padding: 4px;
+  margin-right: 8px;
+  background: #E6F0FF;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.ps-cute-bunny-head:before {
+  content: "\e903";
+}
+.ps-good-mood-emoticon:before {
+  content: "\e904";
+}
+.ps-icon:before {
+  content: "\e905";
+}
+.ps-inverted-commas:before {
+  content: "\e906";
+}
+.ps-light-bulb:before {
+  content: "\e907";
+}
+.ps-phone-receiver:before {
+  content: "\e908";
+  font-size: 14px;
+  color: #FFF; 
+  background: linear-gradient(to right, #DA02DF, #FC36C7);
+  padding: 8px; 
+  margin-right: 15px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.ps-play_video:before {
+  content: "\e909";
+}
+.ps-right-arrow-circular-button:before {
+  content: "\e90a";
+}
+.ps-shot-put:before {
+  content: "\e90b";
+}
+.ps-study:before {
+  content: "\e90c";
+}
+.ps-teddy-bear:before {
+  content: "\e90d";
+  color: #5798FF;
+  padding: 4px;
+  margin-right: 8px;
+  background: #E6F0FF;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+
+
+.ps-cat1:before{
+  content:"";
+  background: url(../img/_slider/1.png);
+}

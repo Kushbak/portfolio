@@ -1,0 +1,38 @@
+html,body,header,.view{
+	height: 700px;
+}
+
+
+
+.navbar{
+	background-color: rgba(0,0,0,0.5);
+}
+
+.top-nav-collapse{
+	background-color: #1c2331;
+}
+
+
+.page-footer{
+	background-color:#1c2331;
+}
+
+
+@media (max-width: 740px) {
+	html,body,header,.view{
+		height: 1000px;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	.navbar{
+		background-color: #1c2331;
+	}
+}
+
+
+@media (max-width: 740px) {
+	.full-page-intro{
+		height: 1000px;
+	}
+}
