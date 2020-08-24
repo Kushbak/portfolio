@@ -14,10 +14,9 @@ $(document).ready(function() {
 
 // adding bg images for works 
 const addBackgroundImg = () => {
-    for(let i = projects.length; i > 0; i--){
-        console.log(i);
+    for(let i = projects.length; i > 0; i--){ 
         projects[projects.length - i].style.background = `url(img/works/myworks${i}.jpg) center center no-repeat`;  
-        projects[i - 1].style.backgroundSize = `cover`;  
+        projects[projects.length - i].style.backgroundSize = "cover";  
     }  
 }
 addBackgroundImg();
@@ -39,7 +38,12 @@ const toggleProjectsDisplay = () => {
                 item.classList.toggle('for-view');
             }
         })
-    }) 
+        if(projects[projects.length-1].classList.contains('for-view')){
+            viewBtn.textContent = 'Показать еще'; 
+        } else {
+            viewBtn.textContent = 'Скрыть';
+        }
+    })  
 }
 toggleProjectsDisplay(); 
 
