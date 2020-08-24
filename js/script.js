@@ -1,29 +1,50 @@
- // Animate script
+const projects = document.querySelectorAll('.work-item');
+ 
+ // Animate script 
+$(document).ready(function() {
+    $("#ulMenu").on("click", "a", function(event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({
+            scrollTop: top
+        }, 800);
+    });
+});
 
- $(document).ready(function() {
-     $("#ulMenu").on("click", "a", function(event) {
-         event.preventDefault();
-         var id = $(this).attr('href'),
-             top = $(id).offset().top;
-         $('body,html').animate({
-             scrollTop: top
-         }, 800);
-     });
- });
+// adding bg images for works 
+const addBackgroundImg = () => {
+    for(let i = projects.length; i > 0; i--){
+        console.log(i);
+        projects[projects.length - i].style.background = `url(img/works/myworks${i}.jpg) center center no-repeat`;  
+        projects[i - 1].style.backgroundSize = `cover`;  
+    }  
+}
+addBackgroundImg();
 
 
- // show and hide some projects
+ // show and hide some projects 
+const toggleProjectsDisplay = () => {
+    const viewBtn = document.querySelector('#viewMore');
+
+    projects.forEach((item, i) => {
+        if(i > 5){
+            item.classList.add('for-view');
+        }
+    })
+
+    viewBtn.addEventListener('click', () => {
+        projects.forEach((item, i) => {
+            if(i > 6){
+                item.classList.toggle('for-view');
+            }
+        })
+    }) 
+}
+toggleProjectsDisplay(); 
 
 
- $('#viewMore').on('click', function(e) {
-     event.preventDefault;
-     $('.for-view').toggleClass('active-more');
-     this.innerHTML = "Скрыть";
- });
-
-
- // change the width of knob canvas  
-
+ // change the width of knob canvas   
  let elem = document.getElementsByClassName('knob');
 
  function skillCanvas() {
@@ -35,56 +56,4 @@
          console.log(1);
      }
  }
- skillCanvas();
-
-
- // validation mail
-
- function validateEmail(email) { 
-     jQuery(document).ready(function() {
-         jQuery(".modalbox").fancybox();
-         jQuery("#contact").submit(function() {
-             return false;
-         });
-         jQuery("#send").on("click", function() {
-             var emailval = jQuery("#email").val();
-             var namevl = jQuery("#name").val(); 
-             var msgval = jQuery("#msg").val();
-             var msglen = msgval.length;
-             var mailvalid = validateEmail(emailval);
-             if (mailvalid == false) {
-                 jQuery("#email").addClass("error");
-             } else if (mailvalid == true) {
-                 jQuery("#email").removeClass("error");
-             }
-             if (mailvalid == false) {
-                 jQuery("#name").addClass("error");
-             } else if (mailvalid == true) {
-                 jQuery("#name").removeClass("error");
-             } 
-             if (msglen < 8) {
-                 jQuery("#msg").addClass("error");
-             } else if (msglen >= 8) {
-                 jQuery("#msg").removeClass("error");
-             }
-             if (mailvalid == true && msglen >= 8) {
-                 // если обе проверки пройдены
-                 // сначала мы скрываем кнопку отправки
-                 $("#send").replaceWith("<em>отправка...</em>");
-                 jQuery.ajax({
-                     type: 'POST',
-                     url: '../sendmessage.php',
-                     data: jQuery("#contact").serialize(),
-                     success: function(data) {
-                         if (data == "true") {
-                             jQuery("#contact").fadeOut("fast", function() {
-                                 jQuery(this).before("<p><strong>Ваше сообщение отправлено</strong></p>");
-                                 setTimeout("jQuery.fancybox.close()", 1000);
-                             });
-                         }
-                     }
-                 });
-             }
-         });
-     });
- };
+ skillCanvas(); 
