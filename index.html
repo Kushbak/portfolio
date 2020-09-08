@@ -5,8 +5,7 @@
     <script src="js/modernizr-custom.js"></script>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
-    <title>Mamytov | Портфолио Frontend-разработчика</title>
-    <link rel="stylesheet" href="css/mdb.lite.min.css">
+    <title>Mamytov | Портфолио Frontend-разработчика</title> 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -15,24 +14,21 @@
 </head>
 
 <body>
-    <section class="Home" id="home">
+    <div class="home" id="home">
         <div class="intro">
             <p class="h-text">Здрасьте, меня зовут Кушбак и я</p>
             <h1>FRONTEND - разработчик</h1>
             <p class="h-text">делаю современные адаптивные сайты</p>
-        </div>
-
-    </section>
-
-
+        </div> 
+    </div>  
 
     <div class="sticky-wrapper" id="sticky-block">
         <header class="header">
-            <div class="container">
+            <div class="wrapper">
                 <nav class="navbar navbar-expand-lg navbar-dark" id="ss-nav">
                     <a class="navbar-brand logo" href="index.html">Kushbak Mamytov</a>
 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <button class="button navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -66,12 +62,12 @@
     </div>
 
     <main data-spy="scroll" data-target="#ss-nav" data-offset="0">
-        <section class="services" id="services">
-            <div class="container">
-                <h2 class="text-center">То, что я делаю</h2>
-                <p class="sections-descr">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
+        <section class="section section_bg-purple" id="services">
+            <div class="wrapper">
+                <h2 class="h2">То, что я делаю</h2>
+                <p class="description">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
                     больше света, открыть глаза людям, раскрыть чудеса вокруг.</p>
-                <div class="services-block">
+                <div class="services">
                     <div class="service-item">
                         <p class="p-1"><i class="fa fa-puzzle-piece fa-2x"></i></p>
                         <h5>Верстка</h5>
@@ -96,13 +92,12 @@
             </div>
         </section>
 
-        <section class="works" id="works">
-            <div class="container">
-                <h2>Мои последние работы</h2>
-                <p class="sections-descr">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
+        <section class="section section_bg-darkGrey section_color-grey" id="works">
+            <div class="wrapper">
+                <h2 class="h2">Мои последние работы</h2>
+                <p class="description">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
                     больше света, открыть глаза людям, раскрыть чудеса вокруг.</p>
-                <div class="works-block">
-
+                <div class="works">
                     <div class="work-item">
                         <a href="https://kushbak.github.io/AdvancedJSCourse3" class="work-item-link">
                             <div class="w-wrapper">
@@ -291,17 +286,16 @@
                     </div>
 
                 </div>
-                <button class="view-more" id="viewMore">Показать еще</button>
+                <button class="button view-more" id="viewMore">Показать еще</button>
             </div>
-        </section>
+        </section> 
 
-
-        <section class="skills" id="skills">
-            <div class="container">
-                <h2>Мои навыки</h2>
-                <p class="sections-descr">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
+        <section class="section section_bg-purple" id="skills">
+            <div class="wrapper">
+                <h2 class="h2">Мои навыки</h2>
+                <p class="description">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
                     больше света, открыть глаза людям, раскрыть чудеса вокруг.</p>
-                <div class="skills-block">
+                <div class="skills">
                     <div class="skill-item">
                         <div class="skillbar">
                             <input class="knob" data-width="150" data-fgColor="#C0ffff" data-skin="tron"
@@ -325,43 +319,35 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  
 
-
-
-        <section class="hireme">
-            <div class="container">
+        <div class="section hireme">
+            <div class="wrapper">
                 <h3 class="text-center">Готовы сделать заказ?</h3>
                 <p class="text-center m-4">А я уже готов получить его. Оставьте свое сообщение.</p>
-                <a href="#contacts"><button class="hireme-btn">Связаться</button></a>
+                <a href="#contacts"><button class="button hireme-btn">Связаться</button></a>
             </div>
-        </section>
+        </div>
 
-        <section class="contacts" id="contacts">
-            <div class="container">
-                <h2>Мои контакты</h2>
-                <p class="sections-descr">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
+        <section class="section section_bg-purple" id="contacts">
+            <div class="wrapper">
+                <h2 class="h2">Мои контакты</h2>
+                <p class="description">Никто не зажигает лампу, чтобы спрятать ее за дверью: цель света - создать
                     больше света, открыть глаза людям, раскрыть чудеса вокруг.</p>
-                <div class="contacts-block">
+                <div class="contacts">
                     <!-- Сделать итемы кликабельными и с переходом прямо в чат, с чутка ярким фоном и закругленнымии краями -->
                     <p class="contacts-item"><b>Telegram:</b>    https://t.me/mamytovv</p>
                     <p class="contacts-item"><b>Instagram:</b>   https://instagram.com/ku5hbak</p>
                     <p class="contacts-item"><b>VK:</b>          https://vk.com/mamytovkushbak</p>
-                    <p class="contacts-item"><b>Mail:</b>        mamytovkushbak@gmail.com</p>
-                </div>
-
-                <!-- <form method="POST" id="contact" name="contact">
-                    <input type="name" name="name" id="name" placeholder="Ваше имя">
-                    <input type="email" name="email" id="email" placeholder="Ваш e-mail">
-                    <textarea name="message" id="msg" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
-                    <button class="contact-btn" id="send">Отправить</button>
-                </form> -->
+                    <p class="contacts-item"><b>Mail:</b>        mamytovkushbak@gmail.com</p> 
+                </div> 
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <!-- <p class="links">
+
+    <footer class="footer">
+        <div class="wrapper">
+     <!--        <p class="links">
                 <a href="https://instagram.com/ku5hbak" target="_blank"> <i class="fa fa-instagram"></i> </a>
                 <a href="https://facebook.com/kushbak.mamytov.5" target="_blank"> <i class="fa fa-facebook-f"></i> </a>
                 <a href="https://t.me/mamytovv" target="_blank"> <i class="fa fa-paper-plane"></i> </a>
@@ -369,13 +355,11 @@
             </p> -->
             <p class="copyright"> © 2020 Kushbak Mamytov | Kyrgyzstan, Osh</p>
         </div>
-    </footer>
-
+    </footer> 
 
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
     <script src="js/jquery.knob.js"></script>
     <script>
         $(function () { $(".knob").knob(); });
@@ -387,10 +371,8 @@
             $("#sticky-block").sticky({ topSpacing: 0 });
         }); 
     </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/mdb.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/script.js"></script>
 
 </body>
 
