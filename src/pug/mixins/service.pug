@@ -1,0 +1,11 @@
+mixin service(iconClass, title, descr, technologies)
+
+    .service-item
+        p.p-1
+            i(class=iconClass)
+        h5.h5 
+            | #{title}
+        p.service-item-text 
+            | #{descr}
+        span
+            | #{technologies}
