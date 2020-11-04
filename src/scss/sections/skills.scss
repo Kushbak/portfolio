@@ -1,26 +1,11 @@
 .skills{ 
     display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 	grid-gap: 20px; 
-	.skill-item{
-		img{
-			width: 100%;
-		}
-		// text-transform: uppercase;
-		// text-align: center;
-		// padding: 20px 0;  
-		// p{
-		// 	font-weight: bold;
-		// 	font-size: 1.2rem;
-		//     margin-top: 60px;  
-		// }
-		// .skillbar{
-		// 	padding: 20px;   
-		// 	input.knob{
-		// 		outline: none; 
-		// 		position: absolute;  
-		// 	} 
-		// }  
+	&__item{ 
+		width: 100%;
+		max-width: 200px;
+		max-height: 150px; 
+		place-self: center;
 	}
 } 

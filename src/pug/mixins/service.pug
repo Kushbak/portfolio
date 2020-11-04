@@ -3,9 +3,9 @@ mixin service(iconClass, title, descr, technologies)
     .service-item
         p.p-1
             i(class=iconClass)
-        h5.h5 
+        h5.h5.service-item__title
             | #{title}
-        p.service-item-text 
+        p.service-item__descr
             | #{descr}
-        span
+        span.service-item__techs
             | #{technologies}
