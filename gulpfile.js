@@ -24,7 +24,7 @@ gulp.task('pug', function (callback) {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('./build/'))
+        .pipe(gulp.dest('./docs/'))
         .pipe(browserSync.stream())
     callback();
 });
@@ -47,28 +47,28 @@ gulp.task('scss', function (callback) {
             overrideBrowserslist: ['last 4 versions']
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./build/css/'))
+        .pipe(gulp.dest('./docs/css/'))
         .pipe(browserSync.stream())
     callback();
 });
 
 gulp.task('copy:css', function (callback) {
     return gulp.src('./src/css/**/*.*')
-        .pipe(gulp.dest('./build/css/'))
+        .pipe(gulp.dest('./docs/css/'))
     callback();
 });
 
 // Копирование Изображений
 gulp.task('copy:img', function (callback) {
     return gulp.src('./src/img/**/*.*')
-        .pipe(gulp.dest('./build/img/'))
+        .pipe(gulp.dest('./docs/img/'))
     callback();
 });
 
 // Копирование Скриптов
 gulp.task('copy:js', function (callback) {
     return gulp.src('./src/js/**/*.*')
-        .pipe(gulp.dest('./build/js/'))
+        .pipe(gulp.dest('./docs/js/'))
     callback();
 });
 
@@ -76,7 +76,7 @@ gulp.task('copy:js', function (callback) {
 gulp.task('watch', function () {
 
     // Следим за картинками и скриптами и обновляем браузер
-    watch(['./build/js/**/*.*', './build/img/**/*.*'], gulp.parallel(browserSync.reload));
+    watch(['./docs/js/**/*.*', './docs/img/**/*.*'], gulp.parallel(browserSync.reload));
 
     // Запуск слежения и компиляции SCSS с задержкой
     watch('./src/scss/**/*.scss', function () {
@@ -86,7 +86,7 @@ gulp.task('watch', function () {
     // Слежение за PUG и сборка
     watch('./src/pug/**/*.pug', gulp.parallel('pug', browserSync.reload))
 
-    // Следим за картинками и скриптами, и копируем их в build
+    // Следим за картинками и скриптами, и копируем их в docs
     watch('./src/img/**/*.*', gulp.parallel('copy:img', browserSync.reload))
     watch('./src/js/**/*.*', gulp.parallel('copy:js', browserSync.reload))
 
@@ -96,13 +96,13 @@ gulp.task('watch', function () {
 gulp.task('server', function () {
     browserSync.init({
         server: {
-            baseDir: "./build/"
+            baseDir: "./docs/"
         }
     })
 });
 
-gulp.task('clean:build', function () {
-    return del('./build')
+gulp.task('clean:docs', function () {
+    return del('./docs')
 });
 
 // Дефолтный таск (задача по умолчанию)
@@ -110,7 +110,7 @@ gulp.task('clean:build', function () {
 gulp.task(
     'default',
     gulp.series(
-        gulp.parallel('clean:build'),
+        gulp.parallel('clean:docs'),
         gulp.parallel('scss', 'pug', 'copy:img', 'copy:js', 'copy:css'),
         gulp.parallel('server', 'watch'),
     )
