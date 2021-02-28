@@ -1,6 +1,6 @@
 const projects = document.querySelectorAll('.work-item');
  
- // Animate script 
+ // Animate script s
 $(document).ready(function() {
     $("#ulMenu").on("click", "a", function(event) {
         event.preventDefault();
@@ -46,26 +46,7 @@ const toggleProjectsDisplay = () => {
     })  
 }
 toggleProjectsDisplay(); 
-
-
- // change the width of knob canvas   
- let elem = document.getElementsByClassName('knob');
-
- function skillCanvas() {
-     if (screen.width <= 460) {
-         elem[0].setAttribute("data-width", 200);
-         elem[1].setAttribute("data-width", 200);
-         elem[2].setAttribute("data-width", 200);
-         elem[3].setAttribute("data-width", 200);
-         console.log(1);
-     }
- }
- skillCanvas(); 
-
-
-$(function () { $(".knob").knob(); });
-$('.knob').attr('readonly', true);
-
+ 
 
 $(document).ready(function () {
     $("#sticky-block").sticky({ topSpacing: 0 });

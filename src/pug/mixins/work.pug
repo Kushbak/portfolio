@@ -1,8 +1,7 @@
 mixin work(workLink, workTitle)
 
     .work-item
-        a(href=workLink).work-item-link
-            .w-wrapper
-                .work-item-text
-                    h5 #{workTitle}
-                    <p>Кликните, <br> чтобы перейти к странице</p>
+        a(href=workLink).work-item__link 
+            .work-item__text
+                h3.h3 #{workTitle}
+                <p>Кликните, <br> чтобы перейти к странице</p>

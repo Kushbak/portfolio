@@ -9,8 +9,8 @@ html(lang="en")
             crossorigin="anonymous") 
         link(rel="stylesheet", href="css/bootstrap.min.css")
         link(rel="stylesheet", href="css/animate.css")
-        link(rel="stylesheet", href="css/main.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&family=Raleway:wght@400;900&display=swap")
+        link(rel="stylesheet", href="css/main.css")
         title Портфолио | Мамытов Кушбак
     body
         .home#home
@@ -22,9 +22,9 @@ html(lang="en")
         include ../sections/_header
         
         main(data-spy="scroll", data-target="#navSticky", data-offset="0")
-            include ../sections/services.pug
-            include ../sections/works.pug
             include ../sections/skills.pug
+            //- include ../sections/services.pug
+            include ../sections/works.pug
 
         include ../sections/_footer
 

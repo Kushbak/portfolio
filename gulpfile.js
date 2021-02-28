@@ -24,7 +24,7 @@ gulp.task('pug', function (callback) {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('./docs/'))
+        .pipe(gulp.dest('./build/'))
         .pipe(browserSync.stream())
     callback();
 });
@@ -47,28 +47,22 @@ gulp.task('scss', function (callback) {
             overrideBrowserslist: ['last 4 versions']
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./docs/css/'))
+        .pipe(gulp.dest('./build/css/'))
         .pipe(browserSync.stream())
-    callback();
-});
-
-gulp.task('copy:css', function (callback) {
-    return gulp.src('./src/css/**/*.*')
-        .pipe(gulp.dest('./docs/css/'))
     callback();
 });
 
 // Копирование Изображений
 gulp.task('copy:img', function (callback) {
     return gulp.src('./src/img/**/*.*')
-        .pipe(gulp.dest('./docs/img/'))
+        .pipe(gulp.dest('./build/img/'))
     callback();
 });
 
 // Копирование Скриптов
 gulp.task('copy:js', function (callback) {
     return gulp.src('./src/js/**/*.*')
-        .pipe(gulp.dest('./docs/js/'))
+        .pipe(gulp.dest('./build/js/'))
     callback();
 });
 
@@ -76,19 +70,19 @@ gulp.task('copy:js', function (callback) {
 gulp.task('watch', function () {
 
     // Следим за картинками и скриптами и обновляем браузер
-    watch(['./docs/js/**/*.*', './docs/img/**/*.*'], gulp.parallel(browserSync.reload));
+    watch(['./build/js/**/*.*', './build/img/**/*.*'], gulp.parallel(browserSync.reload));
 
     // Запуск слежения и компиляции SCSS с задержкой
     watch('./src/scss/**/*.scss', function () {
-        setTimeout(gulp.parallel('scss', browserSync.reload), 500)
+        setTimeout(gulp.parallel('scss'), 500)
     })
 
     // Слежение за PUG и сборка
-    watch('./src/pug/**/*.pug', gulp.parallel('pug', browserSync.reload))
+    watch('./src/pug/**/*.pug', gulp.parallel('pug'))
 
-    // Следим за картинками и скриптами, и копируем их в docs
-    watch('./src/img/**/*.*', gulp.parallel('copy:img', browserSync.reload))
-    watch('./src/js/**/*.*', gulp.parallel('copy:js', browserSync.reload))
+    // Следим за картинками и скриптами, и копируем их в build
+    watch('./src/img/**/*.*', gulp.parallel('copy:img'))
+    watch('./src/js/**/*.*', gulp.parallel('copy:js'))
 
 });
 
@@ -96,13 +90,13 @@ gulp.task('watch', function () {
 gulp.task('server', function () {
     browserSync.init({
         server: {
-            baseDir: "./docs/"
+            baseDir: "./build/"
         }
     })
 });
 
-gulp.task('clean:docs', function () {
-    return del('./docs')
+gulp.task('clean:build', function () {
+    return del('./build')
 });
 
 // Дефолтный таск (задача по умолчанию)
@@ -110,8 +104,8 @@ gulp.task('clean:docs', function () {
 gulp.task(
     'default',
     gulp.series(
-        gulp.parallel('clean:docs'),
-        gulp.parallel('scss', 'pug', 'copy:img', 'copy:js', 'copy:css'),
+        gulp.parallel('clean:build'),
+        gulp.parallel('scss', 'pug', 'copy:img', 'copy:js'),
         gulp.parallel('server', 'watch'),
     )
 );

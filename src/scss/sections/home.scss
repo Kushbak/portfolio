@@ -1,4 +1,3 @@
-
 .home{
 	background: url(../img/header-bg.jpg); 
     background-color: #222;
@@ -6,28 +5,25 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     padding: 0;
-    color: #FFF;
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-   		 -o-background-size: cover;
-  		    background-size: cover;
+    color: #FFF; 
+	background-size: cover;
   	height: 100vh;
 	.intro{
 	    width: 100%; 
 	    text-align: center;
 	    padding-top: 35vh;
-		h1{ 
-			font: 700 2.3rem 'Raleway', sans-serif;
-		    text-transform: uppercase;
-		    letter-spacing: 5px;
-		    margin: 5px 0 5px;
-		}
 		.h-text{
 		    font-family: 'Raleway', "Times New Roman", sans-serif;
 		    font-size: 1rem;
 		    font-style: normal;
 		    text-transform: none;
-		    margin: 15px 0; 
+			margin: 15px 0;  
+			@media (max-width: 1024px) {  
+			    margin: 35px 0; 
+			}
+			@media (max-width: 450px) {    
+		        margin: 40px 0; 
+			}
 		}
 	}
 } 
