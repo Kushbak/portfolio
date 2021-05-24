@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM Watches</title>
+</head>
+<body>
+	<section class="section section_home">
+		<div class="home wrapper">
+			<div class="home__header">
+				<p>
+					0 800 354 54 44
+					<span>Заказать обратный звонок</span>
+				</p>
+				<img src="img/logo.png" alt="logo">
+				<button class="button">Оформить заказ</button>
+			</div>
+			<div class="home__content">
+				<p class="home__context">
+					стильные и крепкие часы
+				</p>
+				<h1>
+					Для тех, кто ценит 
+					<span>
+						эксклюзивные вещи
+					</span>
+				</h1>
+				<p class="home__stats">
+					<span>не царапаются</span>
+					<span>водонепроницаемые</span>
+				</p>
+				<a class="button">перейти в каталог</ф>
+			</div>
+		</div>
+	</section>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+	
+					<div class="container">
+						<div class="buy-block">
+							<h3 class="pb-3"><span>Заказать обратный звонок</span></h3>
+							<form>
+	
+								<div class="my-4">
+									<label class="sr-only">Name</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text font-weight-bold pr-3">Ваше имя :</div>
+										</div>
+										<input type="text" class="form-control" required>
+									</div>
+								</div>
+	
+								<div class="my-4">
+									<label class="sr-only">Number</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text font-weight-bold pr-4">Телефон :</div>
+										</div>
+										<input class="form-control" type="number" placeholder="+7(XXX)-XXX-XX-XX"
+											pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
+									</div>
+								</div>
+	
+								<button type="submit" class="btn-main">заказать</button>
+	
+							</form>
+						</div>
+					</div>
+	
+				</div>
+				<div class="modal-footer">
+	
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
