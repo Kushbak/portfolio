@@ -77,7 +77,7 @@ a {
 }
 @media (max-width: 1200px) {
   .section_about {
-    background-position: left;
+    background-position: right;
   }
 }
 .section_gifs {
@@ -98,6 +98,10 @@ a {
 }
 .section_work {
   background: #000 url(../img/how-we-work_bg.png) center center no-repeat;
+  background-size: cover;
+}
+.section_testimonials {
+  background: #000 url(../img/testimonials_bg.png) center center no-repeat;
   background-size: cover;
 }
 .wrapper {
@@ -190,13 +194,13 @@ a {
 }
 .timer p {
   display: flex;
-  align-items: flex-end;
-  font-size: 0.8rem;
+  align-items: center;
+  font-size: 1rem;
 }
 .timer span {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-right: 0.2em;
+  margin-left: 0.2em;
 }
 .home__header {
   display: flex;
@@ -659,6 +663,18 @@ input:checked ~ .color-block__color > label {
 .color-block__color label {
   display: none;
 }
+.left-arrow {
+  left: 1em;
+}
+.left-arrow_outter {
+  left: -2em;
+}
+.right-arrow {
+  right: 1em;
+}
+.right-arrow_outter {
+  right: -2em;
+}
 .left-arrow,
 .right-arrow {
   position: absolute;
@@ -668,9 +684,93 @@ input:checked ~ .color-block__color > label {
   cursor: pointer;
   user-select: none;
 }
-.left-arrow {
-  left: 20px;
+.testimonials__title {
+  color: #fff;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
-.right-arrow {
-  right: 20px;
+.testimonials__item {
+  background-color: #ffffff60;
+  padding: 2.5em 2.8em 3.5em;
+  text-align: center;
+  margin: 0 0.5em;
+}
+.testimonials__author {
+  margin-top: 3em;
+}
+.testimonials__avatar {
+  max-width: 50px;
+  width: 100%;
+}
+.testimonials__arrows {
+  font-size: 1.2rem;
+  background-color: #ffffff80;
+  color: #000;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+.carousel {
+  max-width: 1024px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel__content {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel__item {
+  display: none;
+  transition: all 0.4s;
+}
+.footer {
+  padding: 4em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer img {
+  margin-right: 1em;
+}
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 20vh;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 2em;
+  border-radius: 1em;
+}
+.modal img {
+  width: 70%;
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+}
+.modal__content {
+  max-width: 1024px;
+}
+.form {
+  padding: 3em;
+  background: #00000030;
+}
+.form__label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.2em;
+}
+.form__row {
+  margin-bottom: 1em;
+  width: 100%;
+}
+.form__input {
+  width: 100%;
 }

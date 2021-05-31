@@ -1,6 +1,6 @@
 'use strict'
 
-const timer = (deadline) => {
+function timer(deadline) {
     const second = 1000
     const minute = second * 60
     const hour = minute * 60
@@ -34,10 +34,17 @@ const timer = (deadline) => {
 
 timer('2021-06-01')
 
-const slider = (images, leftArrow, rightArrow, inputs) => {
+function slider(images, leftArrow, rightArrow, inputBlocks) {
     let counter = 0
-    const input = inputs[counter].querySelector('input')
 
+    const updateView = () => {
+        images.forEach(item => item.style.display = 'none')
+        inputBlocks.forEach(item => item.querySelector('label').style.display = 'none')
+        images[counter].style.display = 'block'
+        inputBlocks[counter].querySelector('input').checked = true
+        inputBlocks[counter].querySelector('label').style.display = 'inline-block'
+    }
+    
     leftArrow.addEventListener('click', () => {
         if(counter > 0) {
             counter -= 1
@@ -45,11 +52,7 @@ const slider = (images, leftArrow, rightArrow, inputs) => {
             counter = images.length - 1
         }
 
-        images.forEach(item => item.style.display = 'none')
-        images[counter].style.display = 'block'
-
-        inputs.forEach(item => (item.querySelector('input').checked = false))
-        input.checked = true
+        updateView()
     })
 
     rightArrow.addEventListener('click', () => {
@@ -58,11 +61,21 @@ const slider = (images, leftArrow, rightArrow, inputs) => {
         } else {
             counter = 0
         }
-        images.forEach(item => item.style.display = 'none')
-        images[counter].style.display = 'block'
+
+        updateView()
     })
 
+    inputBlocks.forEach((item, index) => {
+        item.querySelector('input').addEventListener('click', () => {
+            counter = index
+            updateView()
+        })
+    })
+
+
     images[counter].style.display = 'block'
+    inputBlocks[counter].querySelector('input').checked = true
+    inputBlocks[counter].querySelector('label').style.display = 'inline-block'
 }
 
 slider(
@@ -71,3 +84,46 @@ slider(
     document.querySelector('span.right-arrow'),
     document.querySelectorAll('.color-block__color')
 )
+
+
+function carousel(items, leftArrow, rightArrow) {
+    let counter = 0
+
+    const updateView = () => {
+        items.forEach(item => item.style.display = 'none')
+        items[counter].style.display = 'block'
+    }
+    
+    leftArrow.addEventListener('click', () => {
+        if(counter > 0) {
+            counter -= 1
+        } else {
+            counter = items.length - 1
+        }
+        updateView()
+    })
+
+    rightArrow.addEventListener('click', () => {
+        if(counter < items.length - 1) {
+            counter += 1
+        } else {
+            counter = 0
+        }
+        updateView() //? 
+    })
+
+
+    items[counter].style.display = 'block'
+}
+
+carousel(
+    document.querySelectorAll('.carousel__item'),
+    document.querySelector('.carousel-arrow-left'),
+    document.querySelector('.carousel-arrow-right')
+)
+
+
+function modal(trigger, close, modal) {
+    trigger.addEventListener('click', () => modal.classList.add('active'))
+    close.addEventListener('click', () => modal.classList.remove('active'))
+}
