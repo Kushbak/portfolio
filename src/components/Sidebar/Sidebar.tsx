@@ -1,6 +1,8 @@
+import styled from 'styled-components'
+
 const Sidebar = () => {
     return (
-        <aside>
+        <Aside>
             <div className="logo">
                 <img src="" alt="" className="logo__img" />
             </div>
@@ -13,8 +15,17 @@ const Sidebar = () => {
             <p className="copyright">
                 @Copyright. Rights not reserved. It's Just Web-Site
             </p>
-        </aside>
+        </Aside>
     )
 }
 
 export default Sidebar
+
+const Aside = styled.aside`
+    transform: translateX(-100%);
+    background: #000;
+    border-right: 3px dashed rebeccapurple;
+    @media (min-width: 990px) {
+        transform: translateX(0);
+    }
+`
