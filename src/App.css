@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: 'Indie Flower';
+  src: url('assets/fonts/IndieFlower-Regular.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
