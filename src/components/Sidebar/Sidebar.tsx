@@ -20,23 +20,23 @@ const Sidebar: React.FC<Sidebar> = (props: Sidebar) => {
             <Nav>
                 <NavItem to="/" exact>Главная</NavItem>
                 <NavItem to="/works">Мои работы</NavItem>
-                <NavItem to="/projects">Пет-проекты</NavItem>
+                <NavItem to="/petProjects">Пет-проекты</NavItem>
                 <NavItem to="/contacts">Контакты</NavItem>
             </Nav>
             <Links>
-                <a href="https://instagram.com/ku5hbak">
+                <a href="https://instagram.com/ku5hbak" target='_blank' rel='noopener noreferrer' >
                     <img src={instagramIcon} alt="instagram" />
                 </a>
-                <a href="https://twitter.com/crazykyrgyz">
+                <a href="https://twitter.com/crazykyrgyz" target='_blank' rel='noopener noreferrer' >
                     <img src={twitterIcon} alt="twitter" />
                 </a>
-                <a href="https://t.me/mamytovv">
+                <a href="https://t.me/mamytovv" target='_blank' rel='noopener noreferrer' >
                     <img src={telegramIcon} alt="telegram" />
                 </a>
-                <a href="https://linkedin.com/in/mamytov">
+                <a href="https://linkedin.com/in/mamytov" target='_blank' rel='noopener noreferrer' >
                     <img src={linkedinIcon} alt="linkedin" />
                 </a>
-                <a href="https://github.com/Kushbak">
+                <a href="https://github.com/Kushbak" target='_blank' rel='noopener noreferrer' >
                     <img src={githubIcon} alt="github" />
                 </a>
             </Links>
@@ -70,8 +70,7 @@ const Aside = styled.aside<Sidebar>`
 `
 
 const Logo = styled(NavLink)`
-    display: block;
-    width: 100%;
+    display: inline-block;
     text-transform: uppercase;
     font-size: 1.6rem;
     font-family: 'Indie Flower', Arial, sans-serif;

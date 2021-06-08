@@ -1,7 +1,8 @@
 import styled from "styled-components"
+import telegramIcon from '../../assets/img/icons/telegram.svg'
 
 const Home = (props: any) => {
-    console.log(props)
+
     return (
         <HomeContainer>
             <H1>Mamytov Kushbak</H1>
@@ -9,6 +10,7 @@ const Home = (props: any) => {
             <DescriptionBlock>
                 <p>Добро пожаловать в мое портфолио</p>
                 <p>Я веб-разработчик. Крутой такой разработчик. Убедиться можете перейдя в мои проекты</p>
+                <Button href='https://t.me/mamytovv'>Напиши мне </Button>
             </DescriptionBlock>
         </HomeContainer>
     )
@@ -20,11 +22,13 @@ const H1 = styled.h1`
     font-family: 'Indie Flower', Arial, sans-serif;
     text-transform: uppercase;
     font-size: 4rem;
+    color: #eee;
 `
 
 const HomeContainer = styled.div`
     text-align: center;
     padding: 0 5%;
+    color: #eee;
 `
 
 const DescriptionBlock = styled.div`
@@ -32,5 +36,18 @@ const DescriptionBlock = styled.div`
     margin-top: 1em;
     & > p {
         margin-bottom: 0.3em;
+    }
+`
+
+const Button = styled.a`
+    display: inline-flex;
+    align-items: center;
+    padding: 1em 4em;
+    background: rebeccapurple;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    color: #eee;
+    &:hover {
+        opacity: 0.8;
     }
 `

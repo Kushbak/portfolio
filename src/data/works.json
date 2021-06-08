@@ -1,46 +1,79 @@
 [
     {
-        "title": "Customer Management System(CRM)"
+        "id": 11,
+        "title": "Customer Management System(CRM)",
+        "link": "https://cms4.herokuapp.com/",
+        "stack": "typescript, react, redux, redux-thunk, react-hook-form, axios, react-chartjs2"
+    },
+    {
+        "id": 10,
+        "title": "Finance Management System",
+        "link": "https://fms3-web.herokuapp.com/",
+        "description": "Система управления финансами компаний.",
+        "stack": "react, redux, redux-thunk, redux-form, axios, react-chartjs2"
 
     },
     {
-        "title": "Finance Management System"
-
+        "id": 9,
+        "title": "BuyManas project",
+        "link": "https://buymanas-web.herokuapp.com/",
+        "description": "Торговая площадка для университета КТМУ",
+        "stack": "react, redux, redux-thunk, redux-form, axios"
     },
     {
-
-        "title": "BuyManas project"
+        "id": 8,
+        "title": "Portfolio website for team",
+        "link": "https://kushbak.github.io/NeobisTemplate4/",
+        "description": "Портфолио для команды разработчиков",
+        "stack": "html, css, less"
     },
     {
-
-        "title": "Portfolio website for team"
+        "id": 7,
+        "title": "Portfolio website",
+        "link": "https://kushbak.github.io/NeobisWD/",
+        "stack": "html, css, less"
     },
     {
-
-        "title": "Portfolio website"
+        "id": 6,
+        "title": "Gifts for sweetheart",
+        "link": "https://kushbak.github.io/NeobisFreebie/",
+        "description": "Лэндинг для подарочного магазина",
+        "stack": "html, css, less"
     },
     {
-
-        "title": "Gifts for sweetheart website"
+        "id": 5,
+        "title": "CloudBudget management",
+        "link": "https://kushbak.github.io/NeobisCloudbudget/",
+        "stack": "html, css, less"
     },
     {
-
-        "title": "CloudBudget managment website"
+        "id": 4,
+        "title": "Portfolio website",
+        "link": "https://kushbak.github.io/NeobisTemplate/",
+        "stack": "html, css, less"
     },
     {
-
-        "title": "Portfolio website for Dmitriy(idk him)"
+        "id": 3,
+        "title": "DOM Watches",
+        "link": "projects/works/3-DOMwatches",
+        "locale": true,
+        "description": "Верстка для того же заказчика. Верстка с готового .psd макета.",
+        "stack": "html, css, less, js"
     },
     {
-
-        "title": "DOM Watches"
+        "id": 2,
+        "title": "Игрушки Pomsie",
+        "link": "projects/works/2-Pomsies",
+        "locale": true,
+        "description": "Верстка для того же заказчика. Верстка с готового .psd макета.",
+        "stack": "html, css, less, js"
     },
     {
-
-        "title": "Игрушки Pomsie"
-    },
-    {
-
-        "title": "Детские смарт-часы'"
+        "id": 1,
+        "title": "Детские смарт-часы",
+        "link": "projects/works/1-KidsWatch",
+        "locale": true,
+        "description": "Первый заказ с фриланса. Верстка с готового .psd макета.",
+        "stack": "html, css, less, js"
     }
 ]
