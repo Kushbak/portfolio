@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next"
 import styled from "styled-components"
 import codeIcon from '../../assets/img/icons/coding.svg'
+import locale from '../../i18n'
 
 type project = {
     id: number
     title: string
     link: string
     locale?: boolean
-    description?: string
+    description?: {
+        [key: string]: string
+    }
     stack?: string
     source?: string
 }
@@ -18,6 +22,8 @@ type Props = {
 
 
 const Projects: React.FC<Props> = (props: Props) => {
+    const { t, i18n } = useTranslation()
+
     return (
         <ProjectsContainer>
             {props.projects.map(project => (
@@ -29,10 +35,10 @@ const Projects: React.FC<Props> = (props: Props) => {
                     </ProjectImageWrapper>
                     <ProjectDescription>
                         <Title href={project.locale ? project.link + '/index.html' : project.link}>{project.title}</Title>
-                        <Description>{project.description || ''}</Description>
+                        <Description>{project?.description ? project.description[i18n.language] : ''}</Description>
                         <AdditionInfo>
                             <p>
-                                <b>Стэк:</b> {project.stack || ''}
+                                <b>{t('stack')}:</b> {project.stack || ''}
                             </p>
                             { project.source 
                                 && <a href={project.source}>
@@ -117,7 +123,7 @@ const Description = styled.p`
     flex: 1;
     padding: 1.6em 0;
 `
-const AdditionInfo = styled.p`
+const AdditionInfo = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,5 +134,10 @@ const AdditionInfo = styled.p`
         font-size: 0.9rem;
         margin-right: 0.3em;
     }
-    & img { width: 30px; }
+    & img { 
+        width: 35px; 
+        padding: 5px;
+        border-radius: 100%;
+        border: 1px solid #fff;
+    }
 `

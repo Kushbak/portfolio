@@ -9,7 +9,10 @@
         "id": 10,
         "title": "Finance Management System",
         "link": "https://fms3-web.herokuapp.com/",
-        "description": "Система управления финансами компаний.",
+        "description": {
+            "ru": "Система управления финансами компаний.",
+            "en": "The financial management system of companies."
+        },
         "stack": "react, redux, redux-thunk, redux-form, axios, react-chartjs2",
         "source": "https://github.com/Kushbak/Finance-Management-System3"
 
@@ -18,7 +21,10 @@
         "id": 9,
         "title": "BuyManas project",
         "link": "https://buymanas-web.herokuapp.com/",
-        "description": "Торговая площадка для университета КТМУ",
+        "description": {
+            "ru": "Торговая площадка для обмена товарами и услугами среди студентов и преподавателей университета.",
+            "en": "A marketplace for the exchange of goods and services among university students and faculty."
+        },
         "stack": "react, redux, redux-thunk, redux-form, axios",
         "source": "https://github.com/Kushbak/buymanas-web"
     },
@@ -26,7 +32,10 @@
         "id": 8,
         "title": "Portfolio website for team",
         "link": "https://kushbak.github.io/NeobisTemplate4/",
-        "description": "Портфолио для команды разработчиков",
+        "description": {
+            "ru": "Портфолио для команды разработчиков",
+            "en": "Portfolio for development team"
+        },
         "stack": "html, css, less",
         "source": "https://github.com/Kushbak/NeobisTemplate4"
     },
@@ -41,7 +50,10 @@
         "id": 6,
         "title": "Gifts for sweetheart",
         "link": "https://kushbak.github.io/NeobisFreebie/",
-        "description": "Лэндинг для подарочного магазина",
+        "description": {
+            "ru": "Лэндинг для подарочного магазина",
+            "en": "Landing for the gift store"
+        },
         "stack": "html, css, less",
         "source": "https://github.com/Kushbak/NeobisFreebie"
     },
@@ -65,7 +77,10 @@
         "title": "DOM Watches",
         "link": "projects/works/3-DOMwatches",
         "locale": true,
-        "description": "Одностраничный лэндинг для мужских часов DOM",
+        "description": {
+            "ru": "Одностраничный лэндинг для мужских часов DOM",
+            "en": "Simple landing page for men's watches DOM"
+        },
         "stack": "html, css, less, js",
         "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/3-DOMwatсhes"
     },
@@ -74,7 +89,10 @@
         "title": "Игрушки Pomsie",
         "link": "projects/works/2-Pomsies",
         "locale": true,
-        "description": "Одностраничный лэндинг для игрушек Pomsie",
+        "description": {
+            "ru": "Одностраничный лэндинг для игрушек Pomsie",
+            "en": "Simple landing page for Pomsie toys"
+        },
         "stack": "html, css, less, js",
         "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/2-Pomsies"
     },
@@ -83,7 +101,10 @@
         "title": "Детские смарт-часы",
         "link": "projects/works/1-KidsWatch",
         "locale": true,
-        "description": "Одностраничный лэндинг для детских часов Smart Baby Watch",
+        "description": {
+            "ru": "Одностраничный лэндинг для детских часов Smart Baby Watch",
+            "en": "Simple landing page for Smart baby Watches"
+        },
         "stack": "html, css, less, js",
         "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/"
     }

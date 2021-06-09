@@ -23,7 +23,7 @@ const Sidebar: React.FC<Sidebar> = (props: Sidebar) => {
                 <NavItem to="/" exact>{t('Home')}</NavItem>
                 <NavItem to="/works">{t('My works')}</NavItem>
                 <NavItem to="/petProjects">{t('Pet-projects')}</NavItem>
-                <NavItem to="/contacts">{t('Contacts')}</NavItem>
+                {/* <NavItem to="/contacts">{t('Contacts')}</NavItem> */}
             </Nav>
             <Links>
                 <a href="https://instagram.com/ku5hbak" target='_blank' rel='noopener noreferrer' >

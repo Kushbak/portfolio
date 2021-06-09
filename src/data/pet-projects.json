@@ -28,7 +28,6 @@
         "title": "Corporate",
         "link": "projects/pet-projects/3-Corporate",
         "locale": true,
-        "description": "",
         "stack": "html, css, less, bootstrap4",
         "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/3-Corporate"
     },
@@ -37,7 +36,10 @@
         "title": "Landing with Bootstrap",
         "link": "projects/pet-projects/2-MDB",
         "locale": true,
-        "description": "Первый опыт с Bootstrap и MDB",
+        "description": {
+            "ru": "Первый опыт с Bootstrap и MDB",
+            "en": "First work with Bootstrap and MDB"
+        },
         "stack": "html, css, less, bootstrap4",
         "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/2-MDB"
     },
@@ -46,7 +48,10 @@
         "title": "My 1st simple web-site",
         "link": "projects/pet-projects/1-Mycompany",
         "locale": true,
-        "description": "Первый сайт, оставлю его тут на память",
+        "description": {
+            "ru": "Первый сайт, оставлю его тут на память",
+            "en": "The first site, I'll leave it here as a memento"
+        },
         "stack": "html, css, less",
         "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/1-Mycompany"
     }
