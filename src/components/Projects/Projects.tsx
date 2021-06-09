@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import codeIcon from '../../assets/img/icons/coding.svg'
 
 type project = {
     id: number
@@ -7,6 +8,7 @@ type project = {
     locale?: boolean
     description?: string
     stack?: string
+    source?: string
 }
 
 type Props = {
@@ -28,7 +30,16 @@ const Projects: React.FC<Props> = (props: Props) => {
                     <ProjectDescription>
                         <Title href={project.locale ? project.link + '/index.html' : project.link}>{project.title}</Title>
                         <Description>{project.description || ''}</Description>
-                        <Stack><b>Стэк:</b> {project.stack || ''}</Stack>
+                        <AdditionInfo>
+                            <p>
+                                <b>Стэк:</b> {project.stack || ''}
+                            </p>
+                            { project.source 
+                                && <a href={project.source}>
+                                    <img src={codeIcon} alt="source code" />
+                                </a>
+                            }
+                        </AdditionInfo>
                     </ProjectDescription>
                 </Project>
             ))}
@@ -45,12 +56,11 @@ const ProjectsContainer = styled.div`
         flex-direction: row-reverse;
     }
 `
-
 const Project = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
         height: 350px;
         flex-direction: row;
         &:nth-child(even) {
@@ -58,12 +68,18 @@ const Project = styled.div`
         }
     }    
 `
-
 const ProjectImageWrapper = styled.div`
     overflow: hidden;
-    @media (min-width: 768px) {
-        flex-basis: 50%;
+    max-height: 400px;
+    @media (max-width: 1300px) and (min-width: 768px) {
+        & img {
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 0;
+        }
     }
+    @media (min-width: 900px) { flex-basis: 50%; }
+    @media (min-width: 500px) { max-height: 600px; }
 `
 const ProjectLink = styled.a`
     cursor: pointer;
@@ -77,18 +93,17 @@ const ProjectImage = styled.img`
     width: 100%;
     object-fit: cover;
 `
-
 const ProjectDescription = styled.div`
     padding: 4em 3em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media (min-width: 768px) {
+    align-items: flex-start;
+    @media (min-width: 900px) {
         flex-basis: 50%;
     }
 `
 const Title = styled.a`
-    display: block;
     font-size: 2rem;
     color: #eee;
     padding: 0.4em 0;
@@ -102,11 +117,16 @@ const Description = styled.p`
     flex: 1;
     padding: 1.6em 0;
 `
-const Stack = styled.p`
+const AdditionInfo = styled.p`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.8rem;
     color: rebeccapurple;
-    & > b {
+    width: 100%;
+    & b {
         font-size: 0.9rem;
         margin-right: 0.3em;
     }
+    & img { width: 30px; }
 `

@@ -10,7 +10,8 @@
         "title": "Finance Management System",
         "link": "https://fms3-web.herokuapp.com/",
         "description": "Система управления финансами компаний.",
-        "stack": "react, redux, redux-thunk, redux-form, axios, react-chartjs2"
+        "stack": "react, redux, redux-thunk, redux-form, axios, react-chartjs2",
+        "source": "https://github.com/Kushbak/Finance-Management-System3"
 
     },
     {
@@ -18,62 +19,72 @@
         "title": "BuyManas project",
         "link": "https://buymanas-web.herokuapp.com/",
         "description": "Торговая площадка для университета КТМУ",
-        "stack": "react, redux, redux-thunk, redux-form, axios"
+        "stack": "react, redux, redux-thunk, redux-form, axios",
+        "source": "https://github.com/Kushbak/buymanas-web"
     },
     {
         "id": 8,
         "title": "Portfolio website for team",
         "link": "https://kushbak.github.io/NeobisTemplate4/",
         "description": "Портфолио для команды разработчиков",
-        "stack": "html, css, less"
+        "stack": "html, css, less",
+        "source": "https://github.com/Kushbak/NeobisTemplate4"
     },
     {
         "id": 7,
         "title": "Portfolio website",
         "link": "https://kushbak.github.io/NeobisWD/",
-        "stack": "html, css, less"
+        "stack": "html, css, less",
+        "source": "https://github.com/Kushbak/NeobisWD"
     },
     {
         "id": 6,
         "title": "Gifts for sweetheart",
         "link": "https://kushbak.github.io/NeobisFreebie/",
         "description": "Лэндинг для подарочного магазина",
-        "stack": "html, css, less"
+        "stack": "html, css, less",
+        "source": "https://github.com/Kushbak/NeobisFreebie"
     },
     {
         "id": 5,
         "title": "CloudBudget management",
         "link": "https://kushbak.github.io/NeobisCloudbudget/",
-        "stack": "html, css, less"
+        "stack": "html, css, less",
+        "source": "https://github.com/Kushbak/NeobisCloudbudget"
     },
     {
         "id": 4,
         "title": "Portfolio website",
         "link": "https://kushbak.github.io/NeobisTemplate/",
-        "stack": "html, css, less"
+        "stack": "html, css, less",
+        "source": "https://github.com/Kushbak/NeobisTemplate"
+
     },
     {
         "id": 3,
         "title": "DOM Watches",
         "link": "projects/works/3-DOMwatches",
         "locale": true,
-        "description": "Верстка для того же заказчика. Верстка с готового .psd макета.",
-        "stack": "html, css, less, js"
+        "description": "Одностраничный лэндинг для мужских часов DOM",
+        "stack": "html, css, less, js",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/3-DOMwatсhes"
     },
     {
         "id": 2,
         "title": "Игрушки Pomsie",
         "link": "projects/works/2-Pomsies",
         "locale": true,
-        "description": "Верстка для того же заказчика. Верстка с готового .psd макета.",
-        "stack": "html, css, less, js"
+        "description": "Одностраничный лэндинг для игрушек Pomsie",
+        "stack": "html, css, less, js",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/2-Pomsies"
     },
     {
         "id": 1,
         "title": "Детские смарт-часы",
         "link": "projects/works/1-KidsWatch",
         "locale": true,
-        "description": "Первый заказ с фриланса. Верстка с готового .psd макета.",
-        "stack": "html, css, less, js"
+        "description": "Одностраничный лэндинг для детских часов Smart Baby Watch",
+        "stack": "html, css, less, js",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/"
     }
 ]

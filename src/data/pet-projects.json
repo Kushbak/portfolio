@@ -4,21 +4,24 @@
         "title": "Smart Agency LP",
         "link": "projects/pet-projects/6-MineLP",
         "locale": true,
-        "stack": "html, css, bootstrap4"
+        "stack": "html, css, bootstrap4",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/6-MineLP"
     },
     {
         "id": 5,
         "title": "Simple LP",
         "link": "projects/pet-projects/5-AgencyLP",
         "locale": true,
-        "stack": "html, css, bootstrap4"
+        "stack": "html, css, bootstrap4",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/5-AgencyLP"
     },
     {
         "id": 4,
         "title": "Landing made with MDB",
         "link": "projects/pet-projects/4-MDBProject",
         "locale": true,
-        "stack": "html, css, bootstrap4"
+        "stack": "html, css, bootstrap4",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/4-MDBProject"
     },
     {
         "id": 3,
@@ -26,7 +29,8 @@
         "link": "projects/pet-projects/3-Corporate",
         "locale": true,
         "description": "",
-        "stack": "html, css, less, bootstrap4"
+        "stack": "html, css, less, bootstrap4",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/3-Corporate"
     },
     {
         "id": 2,
@@ -34,7 +38,8 @@
         "link": "projects/pet-projects/2-MDB",
         "locale": true,
         "description": "Первый опыт с Bootstrap и MDB",
-        "stack": "html, css, less, bootstrap4"
+        "stack": "html, css, less, bootstrap4",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/2-MDB"
     },
     {
         "id": 1,
@@ -42,6 +47,7 @@
         "link": "projects/pet-projects/1-Mycompany",
         "locale": true,
         "description": "Первый сайт, оставлю его тут на память",
-        "stack": "html, css, less"
+        "stack": "html, css, less",
+        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/pet-projects/1-Mycompany"
     }
 ]

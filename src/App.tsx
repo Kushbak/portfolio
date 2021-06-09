@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Route, Switch } from 'react-router'
 import styled from 'styled-components'
 import './App.css'
+import NotFound from './components/404/404'
 import { Hamburger } from './components/Hamburger/Hamburger.style'
 import Home from './components/Home/Home'
 import Projects from './components/Projects/Projects'
@@ -22,11 +23,12 @@ const App = () => {
                 <span />
             </Hamburger>
             <Sidebar isSidebarOpen={isSidebarOpen} />
-            <Main onClick={closeOpenedSidebarByClickOutside}>
+            <Main isSidebarOpen={isSidebarOpen} onClick={closeOpenedSidebarByClickOutside}>
                 <Switch>
                     <Route path='/' exact><Home /></Route>
                     <Route path='/works'><Projects projects={worksData} area='work' /></Route>
                     <Route path='/petProjects'><Projects projects={petProjectsData} area='pet-project' /></Route>
+                    <Route path='*'><NotFound /></Route>
                 </Switch>
             </Main>
         </AppContainer>
@@ -43,11 +45,12 @@ const AppContainer = styled.div`
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
 `
 
-const Main = styled.main`  
+const Main = styled.main<{isSidebarOpen: boolean}>`  
     width: 100%;
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
         width: 75%;
     }
 `

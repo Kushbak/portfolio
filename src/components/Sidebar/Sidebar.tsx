@@ -1,27 +1,29 @@
 import styled from 'styled-components'
-// @ts-ignore
 import instagramIcon from '../../assets/img/icons/instagram.svg'
 import twitterIcon from '../../assets/img/icons/twitter.svg'
 import telegramIcon from '../../assets/img/icons/telegram.svg'
 import linkedinIcon from '../../assets/img/icons/linkedin.svg'
 import githubIcon from '../../assets/img/icons/github.svg'
 import { NavLink } from 'react-router-dom'
-// @ts-ignore
+import { useTranslation } from 'react-i18next'
+import { ChangeEvent } from 'react'
 
 type Sidebar = {
     isSidebarOpen: boolean
 }
 
 const Sidebar: React.FC<Sidebar> = (props: Sidebar) => {
+    const { t, i18n } = useTranslation()
+    const onLangChange = (e: ChangeEvent<HTMLSelectElement>) => i18n.changeLanguage(e.target.value)
 
     return (
         <Aside isSidebarOpen={props.isSidebarOpen}>
             <Logo to='/'>Mamytov Kushbak</Logo>
             <Nav>
-                <NavItem to="/" exact>Главная</NavItem>
-                <NavItem to="/works">Мои работы</NavItem>
-                <NavItem to="/petProjects">Пет-проекты</NavItem>
-                <NavItem to="/contacts">Контакты</NavItem>
+                <NavItem to="/" exact>{t('Home')}</NavItem>
+                <NavItem to="/works">{t('My works')}</NavItem>
+                <NavItem to="/petProjects">{t('Pet-projects')}</NavItem>
+                <NavItem to="/contacts">{t('Contacts')}</NavItem>
             </Nav>
             <Links>
                 <a href="https://instagram.com/ku5hbak" target='_blank' rel='noopener noreferrer' >
@@ -40,9 +42,12 @@ const Sidebar: React.FC<Sidebar> = (props: Sidebar) => {
                     <img src={githubIcon} alt="github" />
                 </a>
             </Links>
-            <p className="copyright">
-                @Copyright. Rights not reserved. It's Just Web-Site
-            </p>
+            <Languages>
+                <select name="lang" onChange={onLangChange} defaultValue={i18n.language}>
+                    <option value="ru">RU</option>
+                    <option value="en">EN</option>
+                </select>
+            </Languages>
         </Aside>
     )
 }
@@ -57,15 +62,18 @@ const Aside = styled.aside<Sidebar>`
     top: 0;
     bottom: 0;
     height: 100%;
+    min-height: 100vh;
     background: #000;
     border-right: 3px dashed rebeccapurple;
     transition: transform 0.4s ease-in-out;
     transform: translateX(
         ${p => p.isSidebarOpen ? '0' : '-100%'}
     );
-    @media (min-width: 768px) {
+    z-index: 10;
+    @media (min-width: 900px) {
         transform: translateX(0);
         width: 25%;
+        position: sticky;
     }
 `
 
@@ -117,5 +125,17 @@ const Links = styled.p`
     }
     & > img {
         width: 100%;
+    }
+`
+
+const Languages = styled.div`
+    padding: 2em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    & > select {
+        content: -moz-alt-content !important;
+        unicode-bidi: isolate;
     }
 `
