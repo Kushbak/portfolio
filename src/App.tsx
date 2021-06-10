@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route, Switch } from 'react-router'
+import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import './App.css'
 import NotFound from './components/404/404'
