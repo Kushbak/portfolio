@@ -7,12 +7,10 @@ import githubIcon from '../../assets/img/icons/github.svg'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ChangeEvent } from 'react'
+import { SidebarType } from '../../App'
 
-type Sidebar = {
-    isSidebarOpen: boolean
-}
 
-const Sidebar: React.FC<Sidebar> = (props: Sidebar) => {
+const Sidebar: React.FC<SidebarType> = (props: SidebarType) => {
     const { t, i18n } = useTranslation()
     const onLangChange = (e: ChangeEvent<HTMLSelectElement>) => i18n.changeLanguage(e.target.value)
 
@@ -54,7 +52,7 @@ const Sidebar: React.FC<Sidebar> = (props: Sidebar) => {
 
 export default Sidebar
 
-const Aside = styled.aside<Sidebar>`
+const Aside = styled.aside<SidebarType>`
     min-width: 250px;
     max-width: 350px;
     position: fixed;

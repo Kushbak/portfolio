@@ -10,6 +10,10 @@ import Sidebar from './components/Sidebar/Sidebar'
 import petProjectsData from './data/pet-projects.json'
 import worksData from './data/works.json'
 
+export type SidebarType = {
+    isSidebarOpen: boolean
+}
+
 const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
     const toggleIsSidebarOpen = () => setIsSidebarOpen(state => !state)
@@ -48,7 +52,7 @@ const AppContainer = styled.div`
     position: relative;
 `
 
-const Main = styled.main<{isSidebarOpen: boolean}>`  
+const Main = styled.main<SidebarType>`  
     width: 100%;
     @media (min-width: 900px) {
         width: 75%;

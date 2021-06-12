@@ -1,8 +1,7 @@
 import styled from "styled-components"
+import { SidebarType } from "../../App"
 
-
-type Hamburger = { isSidebarOpen: boolean }
-export const Hamburger = styled.button<Hamburger>`
+export const Hamburger = styled.button<SidebarType>`
     width: 40px;
     height: 40px;
     padding: 6px 0;
