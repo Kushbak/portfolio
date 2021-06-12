@@ -43,10 +43,10 @@ const Sidebar: React.FC<Sidebar> = (props: Sidebar) => {
                 </a>
             </Links>
             <Languages>
-                <select name="lang" onChange={onLangChange} defaultValue={i18n.language}>
+                <Select name="lang" onChange={onLangChange} defaultValue={i18n.language}>
                     <option value="ru">RU</option>
                     <option value="en">EN</option>
-                </select>
+                </Select>
             </Languages>
         </Aside>
     )
@@ -134,8 +134,14 @@ const Languages = styled.div`
     bottom: 0;
     width: 100%;
     text-align: center;
-    & > select {
-        content: -moz-alt-content !important;
-        unicode-bidi: isolate;
-    }
+`
+
+const Select = styled.select`
+    border: 1px solid rebeccapurple;
+    border-radius: 3px;
+    padding: 0.6em;
+    max-height: 40px;
+    height: 100%;
+    background: transparent;
+    color: #fff;
 `

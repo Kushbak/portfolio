@@ -27,4 +27,4 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### Also you can visit this project https://developeeeers.herokuapp.com
+#### Also you can visit this project https://kushbak.herokuapp.com/

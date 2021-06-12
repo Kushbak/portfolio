@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
+import LazyLoad from "react-lazyload"
 import styled from "styled-components"
 import codeIcon from '../../assets/img/icons/coding.svg'
-import locale from '../../i18n'
 
 type project = {
     id: number
@@ -30,7 +30,9 @@ const Projects: React.FC<Props> = (props: Props) => {
                 <Project key={project.id}>
                     <ProjectImageWrapper>
                         <ProjectLink href={project.locale ? project.link + '/index.html' : project.link}>
-                            <ProjectImage src={require(`../../assets/img/works/${props.area + project.id}.jpg`).default} alt={project.title} />
+                            <LazyLoad offset={100} once={true}>
+                                <ProjectImage src={require(`../../assets/img/works/${props.area + project.id}.jpg`).default} alt={project.title} />
+                            </LazyLoad>
                         </ProjectLink>
                     </ProjectImageWrapper>
                     <ProjectDescription>
@@ -58,7 +60,7 @@ export default Projects
 const ProjectsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    &::nth-child(2) {
+    &:nth-child(2) {
         flex-direction: row-reverse;
     }
 `
@@ -76,7 +78,8 @@ const Project = styled.div`
 `
 const ProjectImageWrapper = styled.div`
     overflow: hidden;
-    max-height: 400px;
+    display: grid;
+    place-items: center;
     @media (max-width: 1300px) and (min-width: 768px) {
         & img {
             height: 100%;
@@ -84,7 +87,10 @@ const ProjectImageWrapper = styled.div`
             object-position: 0 0;
         }
     }
-    @media (min-width: 900px) { flex-basis: 50%; }
+    @media (min-width: 900px) { 
+        height: auto;
+        flex-basis: 50%; 
+    }
     @media (min-width: 500px) { max-height: 600px; }
 `
 const ProjectLink = styled.a`
@@ -96,6 +102,8 @@ const ProjectLink = styled.a`
     }
 `
 const ProjectImage = styled.img`
+    height: 350px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 `
@@ -105,6 +113,9 @@ const ProjectDescription = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    @media (max-width: 1300px) and (min-width: 900px) {
+        padding: 3em 2em;
+    }
     @media (min-width: 900px) {
         flex-basis: 50%;
     }
