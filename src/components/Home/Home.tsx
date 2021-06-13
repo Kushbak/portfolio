@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next"
 import styled from "styled-components"
+import { Button } from "../Button/Button.style"
 
 const Home = (props: any) => {
     const { t } = useTranslation()
@@ -38,18 +39,5 @@ const DescriptionBlock = styled.div`
     margin-top: 1em;
     & > p {
         margin-bottom: 0.3em;
-    }
-`
-const Button = styled.a`
-    display: inline-flex;
-    align-items: center;
-    padding: 1em 4em;
-    background: rebeccapurple;
-    border-radius: 5px;
-    transition: all 0.3s linear;
-    color: #eee;
-    margin-top: 5rem;
-    &:hover {
-        opacity: 0.8;
     }
 `

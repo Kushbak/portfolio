@@ -1,7 +1,9 @@
+import React, { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import LazyLoad from "react-lazyload"
 import styled from "styled-components"
 import codeIcon from '../../assets/img/icons/coding.svg'
+import { Button } from "../Button/Button.style"
 
 type project = {
     id: number
@@ -21,17 +23,25 @@ type Props = {
 }
 
 
-const Projects: React.FC<Props> = (props: Props) => {
+const Projects: React.FC<Props> = ({ projects, area }: Props) => {
+    const [visibleProjects, setProjects] = useState<project[]>()
     const { t, i18n } = useTranslation()
 
+    const showMore = () => {
+
+    }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <ProjectsContainer>
-            {props.projects.map(project => (
+            {projects.map(project => (
                 <Project key={project.id}>
                     <ProjectImageWrapper>
                         <ProjectLink href={project.locale ? project.link + '/index.html' : project.link}>
-                            <LazyLoad offset={100} once={true}>
-                                <ProjectImage src={require(`../../assets/img/works/${props.area + project.id}.jpg`).default} alt={project.title} />
+                            <LazyLoad  offset={0} once={true}>
+                                <ProjectImage src={require(`../../assets/img/works/${area + project.id}.jpg`).default} alt={project.title} />
                             </LazyLoad>
                         </ProjectLink>
                     </ProjectImageWrapper>
@@ -51,6 +61,7 @@ const Projects: React.FC<Props> = (props: Props) => {
                     </ProjectDescription>
                 </Project>
             ))}
+            {/* <Button>Показать еще</Button> */}
         </ProjectsContainer>
     )
 }

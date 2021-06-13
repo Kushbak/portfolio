@@ -26,7 +26,7 @@ const App = () => {
                 <span />
                 <span />
             </Hamburger>
-            <Sidebar isSidebarOpen={isSidebarOpen} />
+            <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
             <Main isSidebarOpen={isSidebarOpen} onClick={closeOpenedSidebarByClickOutside}>
                 <Switch>
                     <Route path='/' exact><Home /></Route>

@@ -82,7 +82,7 @@
             "en": "Simple landing page for men's watches DOM"
         },
         "stack": "html, css, less, js",
-        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/3-DOMwatсhes"
+        "source": "https://github.com/Kushbak/portfolio/public/projects/works/3-DOMwatсhes"
     },
     {
         "id": 2,
@@ -94,7 +94,7 @@
             "en": "Simple landing page for Pomsie toys"
         },
         "stack": "html, css, less, js",
-        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/2-Pomsies"
+        "source": "https://github.com/Kushbak/portfolio/public/projects/works/2-Pomsies"
     },
     {
         "id": 1,
@@ -106,6 +106,6 @@
             "en": "Simple landing page for Smart baby Watches"
         },
         "stack": "html, css, less, js",
-        "source": "https://github.com/Kushbak/Portfolio-website/public/projects/works/"
+        "source": "https://github.com/Kushbak/portfolio/public/projects/works/"
     }
 ]

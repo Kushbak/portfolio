@@ -9,18 +9,22 @@ import { useTranslation } from 'react-i18next'
 import { ChangeEvent } from 'react'
 import { SidebarType } from '../../App'
 
+type SidebarTypeWithF = {
+    setIsSidebarOpen: (value: boolean) => void
+} & SidebarType
 
-const Sidebar: React.FC<SidebarType> = (props: SidebarType) => {
+const Sidebar: React.FC<SidebarTypeWithF> = (props: SidebarTypeWithF) => {
     const { t, i18n } = useTranslation()
     const onLangChange = (e: ChangeEvent<HTMLSelectElement>) => i18n.changeLanguage(e.target.value)
 
+    const handleSidebarClose = () => props.setIsSidebarOpen(false)
     return (
         <Aside isSidebarOpen={props.isSidebarOpen}>
             <Logo to='/'>Mamytov Kushbak</Logo>
             <Nav>
-                <NavItem to="/" exact>{t('Home')}</NavItem>
-                <NavItem to="/works">{t('My works')}</NavItem>
-                <NavItem to="/petProjects">{t('Pet-projects')}</NavItem>
+                <NavItem onClick={handleSidebarClose} to="/" exact>{t('Home')}</NavItem>
+                <NavItem onClick={handleSidebarClose} to="/works">{t('My works')}</NavItem>
+                <NavItem onClick={handleSidebarClose} to="/petProjects">{t('Pet-projects')}</NavItem>
                 {/* <NavItem to="/contacts">{t('Contacts')}</NavItem> */}
             </Nav>
             <Links>
