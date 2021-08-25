@@ -39,7 +39,7 @@ const Projects: React.FC<Props> = ({ projects, area }: Props) => {
             {projects.map(project => (
                 <Project key={project.id}>
                     <ProjectImageWrapper>
-                        <ProjectLink href={project.locale ? project.link + '/index.html' : project.link}>
+                        <ProjectLink rel='noopener noreferrer' target='_blank' href={project.locale ? project.link + '/index.html' : project.link}>
                             <LazyLoad  offset={0} once={true}>
                                 <ProjectImage src={require(`../../assets/img/works/${area + project.id}.jpg`).default} alt={project.title} />
                             </LazyLoad>
@@ -53,7 +53,7 @@ const Projects: React.FC<Props> = ({ projects, area }: Props) => {
                                 <b>{t('stack')}:</b> {project.stack || ''}
                             </p>
                             { project.source 
-                                && <a href={project.source}>
+                                && <a rel='noopener noreferrer' target='_blank' href={project.source}>
                                     <img src={codeIcon} alt="source code" />
                                 </a>
                             }
