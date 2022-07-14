@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next"
 import LazyLoad from "react-lazyload"
 import styled from "styled-components"
 import codeIcon from '../../assets/img/icons/coding.svg'
-import { Button } from "../Button/Button.style"
 
 type project = {
     id: number
@@ -24,12 +23,7 @@ type Props = {
 
 
 const Projects: React.FC<Props> = ({ projects, area }: Props) => {
-    const [visibleProjects, setProjects] = useState<project[]>()
     const { t, i18n } = useTranslation()
-
-    const showMore = () => {
-
-    }
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -61,7 +55,6 @@ const Projects: React.FC<Props> = ({ projects, area }: Props) => {
                     </ProjectDescription>
                 </Project>
             ))}
-            {/* <Button>Показать еще</Button> */}
         </ProjectsContainer>
     )
 }
