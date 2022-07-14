@@ -13,11 +13,7 @@ import worksData from './data/works.json'
 export type SidebarType = {
     isSidebarOpen: boolean
 }
-
-const App = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-    const toggleIsSidebarOpen = () => setIsSidebarOpen(state => !state)
-    const closeOpenedSidebarByClickOutside = () => isSidebarOpen && setIsSidebarOpen(false)
+ebarByClickOutside = () => isSidebarOpen && setIsSidebarOpen(false)
 
     return (
         <AppContainer>
